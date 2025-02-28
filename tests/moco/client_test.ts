@@ -1,6 +1,7 @@
 import { assertEquals, assertExists } from "@std/assert";
 import { assertSpyCalls, spy } from "@std/testing/mock";
 import { MocoClient } from "../../src/moco/client.ts";
+import { CreateMocoActivity } from "../../src/moco/types.ts";
 
 // Mock fetch to avoid actual API calls during tests
 const originalFetch = globalThis.fetch;
@@ -43,6 +44,16 @@ const mockFetch = async (
         active: true,
       },
     ];
+  } else if (url.includes("/activities")) {
+    responseBody = {
+      id: 123,
+      date: "2024-02-28",
+      seconds: 3600,
+      description: "Test activity",
+      project_id: 456,
+      task_id: 789,
+      billable: true,
+    };
   }
 
   return new Response(JSON.stringify(responseBody), {
@@ -145,6 +156,46 @@ Deno.test("MocoClient - Request method handles errors", async () => {
 
     assertExists(error);
     assertEquals(error?.message.includes("HTTP error"), true);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+Deno.test("MocoClient - Create Activity", async () => {
+  try {
+    globalThis.fetch = mockFetch;
+
+    const client = new MocoClient("example", "api-token");
+    const fetchSpy = spy(globalThis, "fetch");
+
+    const newActivity: CreateMocoActivity = {
+      date: "2024-02-28",
+      seconds: 3600,
+      description: "Test activity",
+      project_id: 456,
+      task_id: 789,
+      billable: true,
+    };
+
+    const activity = await client.createActivity(newActivity);
+
+    // Assert fetch was called with correct URL and method
+    assertSpyCalls(fetchSpy, 1);
+    const call = fetchSpy.calls[0];
+    const url = call.args[0].toString();
+    const options = call.args[1];
+
+    assertEquals(url.includes("/activities"), true);
+    assertEquals(options?.method, "POST");
+    assertEquals(options?.body, JSON.stringify(newActivity));
+
+    // Assert response was processed correctly
+    assertExists(activity);
+    assertEquals(activity.id, 123);
+    assertEquals(activity.seconds, 3600);
+    assertEquals(activity.description, "Test activity");
+    assertEquals(activity.project_id, 456);
+    assertEquals(activity.task_id, 789);
   } finally {
     globalThis.fetch = originalFetch;
   }

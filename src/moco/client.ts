@@ -1,4 +1,10 @@
-import { MocoProject, MocoTask, MocoUser } from "./types.ts";
+import {
+  CreateMocoActivity,
+  MocoActivity,
+  MocoProject,
+  MocoTask,
+  MocoUser,
+} from "./types.ts";
 
 export class MocoClient {
   private readonly baseUrl: string;
@@ -27,11 +33,25 @@ export class MocoClient {
     return await this.request<Array<MocoUser>>(`/users?${active}&${internal}`);
   }
 
-  private async request<T>(path: string): Promise<T> {
+  public async createActivity(
+    activity: CreateMocoActivity,
+  ): Promise<MocoActivity> {
+    return await this.request<MocoActivity>("/activities", {
+      method: "POST",
+      body: JSON.stringify(activity),
+    });
+  }
+
+  private async request<T>(
+    path: string,
+    options: RequestInit = {},
+  ): Promise<T> {
     const response = await fetch(`${this.baseUrl}${path}`, {
+      ...options,
       headers: {
         Authorization: `Token token=${this.apiKey}`,
         "Content-Type": "application/json",
+        ...options.headers,
       },
     });
 

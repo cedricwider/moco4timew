@@ -43,3 +43,28 @@ export interface MocoUser {
   created_at: string;
   updated_at: string;
 }
+
+export interface MocoActivity {
+  id: number;
+  date: string;
+  seconds: number;
+  description: string;
+  project_id: number;
+  task_id: number;
+  user_id: number;
+  timer_started_at?: string;
+  timer_stopped_at?: string;
+  status: "active" | "locked";
+  billable: boolean;
+  tag_names?: string[];
+}
+
+// For creating new activities, we need a subset of fields
+export interface CreateMocoActivity {
+  date: string;
+  seconds: number;
+  description: string;
+  project_id: number;
+  task_id: number;
+  billable?: boolean;
+}
