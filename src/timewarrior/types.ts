@@ -12,6 +12,8 @@ export interface TimewarriorConfig {
 
 export interface TimewarriorInterval {
   id: number;
+  project: string;
+  description: string;
   start: string;
   end: string;
   tags: string[];

@@ -12,13 +12,13 @@ verbose: 1
     "id": 1,
     "start": "20240228T080000Z",
     "end": "20240228T120000Z",
-    "tags": ["work", "project1"]
+    "tags": ["SUGB: Test description", "work", "project1"]
   },
   {
     "id": 2,
     "start": "20240228T130000Z",
     "end": "20240228T170000Z",
-    "tags": ["work", "project2"]
+    "tags": ["SUBRIS: Add tests to project", "work", "project2"]
   }
 ]`;
 
@@ -34,7 +34,10 @@ verbose: 1
 
   // Test intervals parsing
   assertEquals(result.intervals.length, 2);
-  assertEquals(result.intervals[0].id, 1);
-  assertEquals(result.intervals[0].start, "20240228T080000Z");
-  assertEquals(result.intervals[0].tags, ["work", "project1"]);
+  const interval = result.intervals[0];
+  assertEquals(interval.id, 1);
+  assertEquals(interval.project, "sugb");
+  assertEquals(interval.description, "Test description");
+  assertEquals(interval.start, "20240228T080000Z");
+  assertEquals(interval.tags, ["work", "project1"]);
 });

@@ -68,7 +68,32 @@ export class TimewarriorParser {
    * @param jsonStr Raw JSON string containing intervals
    * @returns Array of parsed intervals
    */
-  private static parseIntervals(jsonStr: string): TimewarriorInterval[] {
-    return JSON.parse(jsonStr);
+  private static parseIntervals(intervalsStr: string): TimewarriorInterval[] {
+    if (!intervalsStr.trim()) {
+      return [];
+    }
+
+    return JSON.parse(intervalsStr).map((interval: any) => {
+      const [projectTag, ...remainingTags] = interval.tags;
+      const [project, description] = this.parseProjectTag(projectTag);
+
+      return {
+        id: interval.id,
+        start: interval.start,
+        end: interval.end,
+        project,
+        description,
+        tags: remainingTags,
+      };
+    });
+  }
+
+  private static parseProjectTag(tag: string): [string, string] {
+    const match = tag.match(/^([^:]+):\s*(.+)$/);
+    if (!match) {
+      return ["", ""];
+    }
+    const [, project, description] = match;
+    return [project.toLowerCase(), description.trim()];
   }
 }
