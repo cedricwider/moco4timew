@@ -25,13 +25,39 @@ export class TimewarriorParser {
    * @returns Parsed configuration object
    */
   private static parseConfig(configStr: string): TimewarriorConfig {
-    const config: TimewarriorConfig = {};
+    const config: TimewarriorConfig = {
+      debug: false,
+      verbose: false,
+    };
 
     configStr.split("\n").forEach((line) => {
       const [key, ...valueParts] = line.split(": ");
-      if (key && valueParts.length > 0) {
-        config[key] = valueParts.join(": ");
+      const value = valueParts.join(": ");
+
+      if (!key || !value) return;
+
+      if (key === "debug") {
+        config.debug = value === "1";
+        return;
       }
+
+      if (key === "verbose") {
+        config.verbose = value === "1";
+        return;
+      }
+
+      // Handle nested properties like temp.report.start
+      const parts = key.split(".");
+      let current: any = config;
+
+      parts.forEach((part, index) => {
+        if (index === parts.length - 1) {
+          current[part] = value;
+        } else {
+          current[part] = current[part] || {};
+          current = current[part];
+        }
+      });
     });
 
     return config;

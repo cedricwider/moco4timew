@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import { assertEquals } from "@std/assert";
 import { TimewarriorParser } from "../../src/timewarrior/parser.ts";
 
 Deno.test("TimewarriorParser.parse", () => {
@@ -24,11 +24,13 @@ verbose: 1
 
   const result = TimewarriorParser.parse(input);
 
+  const config = result.config;
+
   // Test config parsing
-  assertEquals(result.config["temp.report.start"], "20240228T000000Z");
-  assertEquals(result.config["temp.report.end"], "20240228T235959Z");
-  assertEquals(result.config["debug"], "0");
-  assertEquals(result.config["verbose"], "1");
+  assertEquals(config.temp?.report?.start, "20240228T000000Z");
+  assertEquals(config.temp?.report?.end, "20240228T235959Z");
+  assertEquals(result.config.debug, false);
+  assertEquals(result.config.verbose, true);
 
   // Test intervals parsing
   assertEquals(result.intervals.length, 2);

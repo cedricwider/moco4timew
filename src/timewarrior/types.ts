@@ -1,5 +1,13 @@
 export interface TimewarriorConfig {
-  [key: string]: string;
+  temp?: {
+    report?: {
+      start?: string;
+      end?: string;
+    };
+  };
+  debug: boolean;
+  verbose: boolean;
+  [key: string]: unknown;
 }
 
 export interface TimewarriorInterval {
