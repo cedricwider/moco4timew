@@ -58,24 +58,59 @@ export class IntervalTransformer {
    * @returns A Moco activity ready to be created
    * @throws Error if no matching project is found or if interval data is invalid
    */
-  public toActivity(interval: TimewarriorInterval): CreateMocoActivity {
+  public toActivity(
+    interval: TimewarriorInterval,
+  ): CreateMocoActivity | undefined {
     // Validate interval
     this.validateInterval(interval);
 
     const project = this.findProject(interval.project);
     const technicalTask = this.findTask(interval.tags, project.tasks);
+    if (!technicalTask) {
+      console.error(
+        `!!! No technical task found for interval ${JSON.stringify(interval)}`,
+      );
+      return;
+    }
 
-    return {
+    return this.buildCreateMocoActivity(project, technicalTask, interval);
+  }
+
+  /**
+   * Builds a Moco activity object based on interval data
+   * @param project The matched Moco project
+   * @param technicalTask The matched Moco task
+   * @param interval The Timewarrior interval
+   * @returns A Moco activity object
+   */
+  private buildCreateMocoActivity(
+    project: MocoProject,
+    technicalTask: MocoTask,
+    interval: TimewarriorInterval,
+  ): CreateMocoActivity {
+    const createMocoActivity: CreateMocoActivity = {
       project_id: project.id,
-      task_id: technicalTask?.id ?? project.tasks[0].id,
+      task_id: technicalTask?.id,
       date: new Date(formatISOString(interval.start))
         .toISOString()
         .split("T")[0],
       seconds: this.calculateSeconds(interval),
       description: interval.description,
     };
+
+    if (interval.tags.some((tag) => this.NO_BILL_TAGS.includes(tag))) {
+      createMocoActivity.billable = false;
+    }
+
+    return createMocoActivity;
   }
 
+  /**
+   * Finds the most appropriate project based on interval project name
+   * @param searchTerm Project name from the Timewarrior interval
+   * @returns The best matching project
+   * @throws Error if no matching project is found
+   */
   private findProject(searchTerm: string) {
     const project = this.fuzzyFind(this.projects, searchTerm, ["name"]);
 
@@ -106,7 +141,7 @@ export class IntervalTransformer {
     // Filter out work tag and keep only non-billable tags
     const nonBillableTags = tags
       .filter((tag) => tag !== "work") // work is just the context added by taskwarrior
-      .filter((tag) => this.NO_BILL_TAGS.includes(tag));
+      .filter((tag) => !this.NO_BILL_TAGS.includes(tag));
 
     // Default to "software engineering" if no relevant tags found
     const searchTerm = nonBillableTags[0] ?? "software engineering";

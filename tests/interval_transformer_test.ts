@@ -54,7 +54,7 @@ Deno.test(
 
     assertEquals(result, {
       project_id: 944959964,
-      task_id: 3492148,
+      task_id: 3492153, // (3492153) Support, Maintenance & Operations
       date: "2025-02-28",
       seconds: 900, // 15 minutes
       description: "Fix .pdf canvas width issue",
