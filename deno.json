@@ -3,7 +3,8 @@
     "dev": "deno run --watch main.ts",
     "test": "deno test --allow-read tests/",
     "test:watch": "deno test --allow-read --watch tests/ src/",
-    "check": "deno check src/**/*.ts"
+    "check": "deno check src/**/*.ts",
+    "build": "deno compile --allow-read --allow-write --allow-net main.ts"
   },
   "fmt": {
     "options": {
