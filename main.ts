@@ -1,5 +1,6 @@
 #!/usr/bin/env -S deno run
 
+import { MocoClient } from "./src/moco/client.ts";
 import { TimewarriorParser } from "./src/mod.ts";
 
 // Buffer to store incoming data
@@ -14,9 +15,18 @@ for await (const chunk of Deno.stdin.readable) {
 // Parse the input using our TimewarriorParser
 const parsedData = TimewarriorParser.parse(input);
 
+const mocoClient = new MocoClient(
+  "simplificator",
+  Deno.env.get("MOCO_API_KEY") || "",
+);
+
+const projects = await mocoClient.getAssignedProjects(true);
+
 // Output the parsed data
 console.log("Parsed Timewarrior Data:");
 console.log("------------------------");
 console.log("Config:", parsedData.config);
 console.log("------------------------");
 console.log("Intervals:", parsedData.intervals);
+console.log("------------------------");
+console.log("Projects:", projects);
