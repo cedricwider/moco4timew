@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run
 
 import { MocoClient } from "./src/moco/client.ts";
-import { TimewarriorParser } from "./src/mod.ts";
+import { IntervalTransformer, TimewarriorParser } from "./src/mod.ts";
 
 // Buffer to store incoming data
 let input = "";
@@ -22,6 +22,11 @@ const mocoClient = new MocoClient(
 
 const projects = await mocoClient.getAssignedProjects(true);
 
+const transformer = new IntervalTransformer(projects);
+const activities = parsedData.intervals.map((interval) =>
+  transformer.toActivity(interval),
+);
+
 // Output the parsed data
 console.log("Parsed Timewarrior Data:");
 console.log("------------------------");
@@ -30,3 +35,5 @@ console.log("------------------------");
 console.log("Intervals:", parsedData.intervals);
 console.log("------------------------");
 console.log("Projects:", projects);
+console.log("------------------------");
+console.log("Activities:", activities);

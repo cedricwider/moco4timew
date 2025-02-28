@@ -7,7 +7,9 @@
     "jsr:@std/fs@^1.0.9": "1.0.13",
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/path@^1.0.8": "1.0.8",
-    "jsr:@std/testing@^1.0.9": "1.0.9"
+    "jsr:@std/testing@^1.0.9": "1.0.9",
+    "npm:@scmmishra/pico-search@*": "0.5.4",
+    "npm:@scmmishra/pico-search@~0.5.4": "0.5.4"
   },
   "jsr": {
     "@std/assert@1.0.11": {
@@ -40,6 +42,11 @@
         "jsr:@std/internal",
         "jsr:@std/path"
       ]
+    }
+  },
+  "npm": {
+    "@scmmishra/pico-search@0.5.4": {
+      "integrity": "sha512-JdV8KumQ+pE5tqgQ71xUT9biE/qV//tx3NCqTLkW9Z4tsjKGN0B6kVowmtaZBAtErqir9XiMxsKXRTMF/MpUww=="
     }
   },
   "redirects": {
@@ -84,7 +91,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
-      "jsr:@std/testing@^1.0.9"
+      "jsr:@std/testing@^1.0.9",
+      "npm:@scmmishra/pico-search@~0.5.4"
     ]
   }
 }

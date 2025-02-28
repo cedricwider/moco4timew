@@ -1,0 +1,1608 @@
+[
+  {
+    "id": 944484472,
+    "identifier": "P178-275",
+    "name": "Die Zahnärzte - Hosting und Support",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760254383,
+      "name": "AAA dent AG"
+    },
+    "tasks": [
+      {
+        "id": 3174270,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 35032,
+        "name": "Entwicklung",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3437469,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 35033,
+        "name": "Design / Layout",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 35034,
+        "name": "Projektleitung, Beratung, Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 2719403,
+        "name": "Entwicklung, Wartung, Support",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 2719149,
+        "name": "Support (Urgent)",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944921458,
+    "identifier": "P050-728",
+    "name": "ISS Maintenance",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253728,
+      "name": "ISS Schweiz AG"
+    },
+    "tasks": [
+      {
+        "id": 3193915,
+        "name": "Entwicklung/Support/Maintenance",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3235796,
+        "name": "Entwicklung/Support/Maintenance [HR Hub]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193918,
+        "name": "Entwicklung/Support/Maintenance [Fleetscope]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193913,
+        "name": "Entwicklung/Support/Maintenance [Infrastruktur]",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3193917,
+        "name": "Entwicklung/Support/Maintenance [Inspector]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193914,
+        "name": "Entwicklung/Support/Maintenance [NVSDB]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193916,
+        "name": "Entwicklung/Support/Maintenance [Permit]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193923,
+        "name": "Entwicklung/Support/Maintenance [Vetting]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193924,
+        "name": "Entwicklung/Support/Maintenance [WEW]",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3193921,
+        "name": "Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3193922,
+        "name": "Meetings",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3193919,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3193920,
+        "name": "UI / Design / Layout",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944923123,
+    "identifier": "P010-745",
+    "name": "Hosting, Support und SLA für MyClimate Calculate and Shape Your Trip",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253569,
+      "name": "myclimate"
+    },
+    "tasks": [
+      {
+        "id": 3207794,
+        "name": "Software Engineering (Junior)",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3207802,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3207800,
+        "name": "Meetings & Kommunikation",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3207795,
+        "name": "UX Konzeptarbeit & Visuelle Gestaltung",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3207796,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3207797,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3207798,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3207801,
+        "name": "Express-Support",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3207799,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944934716,
+    "identifier": "P309-811",
+    "name": "SÜGB App: Betrieb, Support und Maintenance",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760546800,
+      "name": "SÜGB Schweizerischer Überwachungsverband für Gesteinsbaustoffe"
+    },
+    "tasks": [
+      {
+        "id": 3281066,
+        "name": "On project learning",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3281065,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3281058,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3281060,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3281061,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3281063,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3281067,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3281062,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3441051,
+        "name": "Software Engineering – über Budget",
+        "active": false,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944945965,
+    "identifier": "P035-884",
+    "name": "Kuoni - Wartung und Support inkl. Hosting",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253580,
+      "name": "DERTOUR Suisse AG (ehemals DER Touristik Suisse AG)"
+    },
+    "tasks": [
+      {
+        "id": 3387914,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3387916,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3387911,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3435586,
+        "name": "Software Engineering (über Budget)",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3387912,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3387913,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3422934,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3387915,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3387917,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944952723,
+    "identifier": "P284-936",
+    "name": "Maintenance",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760407626,
+      "name": "Seabird AG"
+    },
+    "tasks": [
+      {
+        "id": 3438877,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438878,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438876,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438879,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438883,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438880,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3438881,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3438882,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944952740,
+    "identifier": "P020-938",
+    "name": "Unterstützung Software Entwicklung 2025",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253562,
+      "name": "Docuteam AG"
+    },
+    "tasks": [
+      {
+        "id": 3438969,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438967,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438970,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438971,
+        "name": "On project learning",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3438972,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3438966,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3438968,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944952985,
+    "identifier": "P287-939",
+    "name": "tbf.digital 2024",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760491013,
+      "name": "TBF + Partner AG"
+    },
+    "tasks": [
+      {
+        "id": 3441031,
+        "name": "Projektmanagement",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441036,
+        "name": "On project learning",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3441037,
+        "name": "Sales",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3441038,
+        "name": "next.tbf.digital",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441028,
+        "name": "Software Engineering",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441029,
+        "name": "UX Konzeptarbeit & Visuelle Gestaltung",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441030,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441032,
+        "name": "Meetings & Kommunikation",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441033,
+        "name": "Support, Maintenance & Operations",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441034,
+        "name": "Express-Support",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3441035,
+        "name": "Know-how transfer",
+        "active": false,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944953707,
+    "identifier": "PKDNR-943",
+    "name": "2024 Happy Office",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3446625,
+        "name": "Office infrastructure (network, phone system, ...)",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446624,
+        "name": "Bürounterhalt und Einkauf",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944953708,
+    "identifier": "PKDNR-944",
+    "name": "2024 Happy People",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3446634,
+        "name": "HR-Administration",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446630,
+        "name": "1on1s",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446635,
+        "name": "Personalentwicklung",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446637,
+        "name": "Event organisation",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446636,
+        "name": "Good vibes",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446633,
+        "name": "People joining/leaving",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446632,
+        "name": "Hiring",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446639,
+        "name": "Diverses Happy People",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3446631,
+        "name": "Internal Meetings",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944953911,
+    "identifier": "P309-946",
+    "name": "SÜGB App: Erweiterungen 2024",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760546800,
+      "name": "SÜGB Schweizerischer Überwachungsverband für Gesteinsbaustoffe"
+    },
+    "tasks": [
+      {
+        "id": 3448215,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3448216,
+        "name": "Softwareanpassungen - bedingt durch die Änderung an Drittsystemen",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3448219,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3448217,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3448218,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3448220,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3448221,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944954033,
+    "identifier": "PKDNR-954",
+    "name": "2024 Projects",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3449031,
+        "name": "Planning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449032,
+        "name": "KPIs",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3449033,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449034,
+        "name": "Controlling",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449036,
+        "name": "Prozessbeschreibungen",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449038,
+        "name": "Diverses",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449037,
+        "name": "Internal Meetings",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3449035,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3498870,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944954371,
+    "identifier": "PKDNR-960",
+    "name": "2024 Software-Lifecycle",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3451199,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451200,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451201,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451202,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451203,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451204,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944954435,
+    "identifier": "PKDNR-962",
+    "name": "2024 Leadership",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3451905,
+        "name": "Diverses",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451904,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944954438,
+    "identifier": "PKDNR-964",
+    "name": "2024 Sales",
+    "active": true,
+    "billable": false,
+    "customer": {
+      "id": 760253684,
+      "name": "Simplificator AG"
+    },
+    "tasks": [
+      {
+        "id": 3451920,
+        "name": "Meeting People",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451921,
+        "name": "Internal Meetings",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451918,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451919,
+        "name": "Kontaktaufnahme/Follow-up",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3451922,
+        "name": "Key Account Management",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3451923,
+        "name": "Diverses",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3451924,
+        "name": "Planning",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944957235,
+    "identifier": "P330-978",
+    "name": "Maintenance 2024",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760551320,
+      "name": "ZHAW School of Engineering"
+    },
+    "tasks": [
+      {
+        "id": 3474330,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3474331,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3474332,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3474333,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3474334,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3474335,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944958651,
+    "identifier": "P349-981",
+    "name": "Migration auf ZHAW Server",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760556025,
+      "name": "ZHAW Angewandte Psychologie, Laufbahndiagnostik"
+    },
+    "tasks": [
+      {
+        "id": 3484137,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484138,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484139,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484140,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484142,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3484141,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944958652,
+    "identifier": "P305-982",
+    "name": "Migration auf ZHAW Server",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760546493,
+      "name": "ZHAW Angewandte Psychologie"
+    },
+    "tasks": [
+      {
+        "id": 3484143,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484144,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484145,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484146,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484147,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484148,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944958756,
+    "identifier": "P352-984",
+    "name": "WebApplication",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760556618,
+      "name": "Underlying Inflation Sagl"
+    },
+    "tasks": [
+      {
+        "id": 3484705,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484706,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484707,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484708,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484709,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3484710,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944959755,
+    "identifier": "P309-986",
+    "name": "Integration Subris",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760554281,
+      "name": "Baustoff Kreislauf Schweiz"
+    },
+    "tasks": [
+      {
+        "id": 3490671,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3490672,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3490673,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3490674,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3490675,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3490676,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944959964,
+    "identifier": "P349-987",
+    "name": "Laufbahndiagnostik Wartung und Entwicklung 2025",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760556025,
+      "name": "ZHAW Angewandte Psychologie, Laufbahndiagnostik"
+    },
+    "tasks": [
+      {
+        "id": 3492147,
+        "name": "Software Engineering (Junior)",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492148,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492149,
+        "name": "UX Konzeptarbeit & Visuelle Gestaltung",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492150,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492151,
+        "name": "Projektmanagement",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492152,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492153,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492157,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3492154,
+        "name": "Express-Support",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492155,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3492156,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944959984,
+    "identifier": "P355-988",
+    "name": "Einzelvertrag / Offerte der Plattform \"Sinn im Beruf\"",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760557017,
+      "name": "Hochschule für Angewandte Psychologie FHNW"
+    },
+    "tasks": [
+      {
+        "id": 3492296,
+        "name": "Base setup: servers + project setup",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492297,
+        "name": "User management: User + Admin role",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492298,
+        "name": "\"Bedeutung in Bildern\" (Ressourcen-Bilder)",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492300,
+        "name": "Lieblingsgeschichte",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492299,
+        "name": "\"Kapitel im Leben\" (à la Entwicklungs-Linie)",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492301,
+        "name": "\"Dual crafting\": Text-Felder + Erinnerungsmail",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492302,
+        "name": "Identitätskarte (MWC)",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492303,
+        "name": "KI-unterstütztes Ausfüllen (ca. 4 versch. Stellen + context):",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492304,
+        "name": "CSV-Exporte",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492305,
+        "name": "UX und UI (Partnerarbeiten)",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492306,
+        "name": "Maintenance 1. Jahr",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492307,
+        "name": "Maintenance 2. Jahr",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492308,
+        "name": "Management und Kommunikation",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944960010,
+    "identifier": "P305-989",
+    "name": "ZDVS Testplattform: Maintenance 2025",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760546493,
+      "name": "ZHAW Angewandte Psychologie"
+    },
+    "tasks": [
+      {
+        "id": 3492514,
+        "name": "Software Engineering (Junior)",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492515,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492516,
+        "name": "UX Konzeptarbeit & Visuelle Gestaltung",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492517,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492518,
+        "name": "Projektmanagement",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492519,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492520,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3492521,
+        "name": "Express-Support",
+        "active": false,
+        "billable": true
+      },
+      {
+        "id": 3492522,
+        "name": "Sales",
+        "active": false,
+        "billable": false
+      },
+      {
+        "id": 3492523,
+        "name": "On project learning",
+        "active": true,
+        "billable": false
+      },
+      {
+        "id": 3492524,
+        "name": "Know-how transfer",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944960766,
+    "identifier": "P050-991",
+    "name": "CIP 2025",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253728,
+      "name": "ISS Schweiz AG"
+    },
+    "tasks": [
+      {
+        "id": 3497378,
+        "name": "Entwicklung / Wartung / Support - Allgemein",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3497379,
+        "name": "Entwicklung / Wartung / Support - CS",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3497380,
+        "name": "Entwicklung / Wartung / Support - Swisscom",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3497381,
+        "name": "Entwicklung / Wartung / Support - UBS",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3497382,
+        "name": "Entwicklung / Wartung / Suppport Express Rate",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944960919,
+    "identifier": "P348-992",
+    "name": "HyperUploader: Support",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760556020,
+      "name": "BBVA SA"
+    },
+    "tasks": [
+      {
+        "id": 3498420,
+        "name": "Maintenance (flat rate, 13% of the project volume per year)",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3498422,
+        "name": "Support: Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3498421,
+        "name": "Operation of support systems",
+        "active": true,
+        "billable": true
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  },
+  {
+    "id": 944961320,
+    "identifier": "P028-993",
+    "name": "Upgrade & Migration",
+    "active": true,
+    "billable": true,
+    "customer": {
+      "id": 760253568,
+      "name": "Berufsbildner AG"
+    },
+    "tasks": [
+      {
+        "id": 3501343,
+        "name": "Software Engineering",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3501344,
+        "name": "Beratung, Consulting, Konzeptarbeit",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3501345,
+        "name": "Projektmanagement",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3501346,
+        "name": "Meetings & Kommunikation",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3501347,
+        "name": "Support, Maintenance & Operations",
+        "active": true,
+        "billable": true
+      },
+      {
+        "id": 3501348,
+        "name": "Sales",
+        "active": true,
+        "billable": false
+      }
+    ],
+    "contract": {
+      "user_id": 933594369,
+      "active": true
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 7,
+    "start": "20250228T060000Z",
+    "end": "20250228T063000Z",
+    "project": "happy people",
+    "description": "Morning Catch-Up",
+    "tags": [
+      "admin"
+    ]
+  },
+  {
+    "id": 6,
+    "start": "20250228T063000Z",
+    "end": "20250228T070000Z",
+    "project": "sugb",
+    "description": "Get all tests running again! , work",
+    "tags": []
+  },
+  {
+    "id": 5,
+    "start": "20250228T080000Z",
+    "end": "20250228T090000Z",
+    "project": "sugb",
+    "description": "Get all tests running again! , work",
+    "tags": []
+  },
+  {
+    "id": 4,
+    "start": "20250228T093000Z",
+    "end": "20250228T100000Z",
+    "project": "subris",
+    "description": "Quick Sync Meeting Daniel - saving users",
+    "tags": []
+  },
+  {
+    "id": 3,
+    "start": "20250228T123000Z",
+    "end": "20250228T124500Z",
+    "project": "laufbahndiagnostik",
+    "description": "Fix .pdf canvas width issue",
+    "tags": [
+      "support"
+    ]
+  },
+  {
+    "id": 2,
+    "start": "20250228T124500Z",
+    "end": "20250228T130000Z",
+    "project": "happy people",
+    "description": "Admin",
+    "tags": [
+      "div"
+    ]
+  },
+  {
+    "id": 1,
+    "start": "20250228T130000Z",
+    "end": "20250228T134500Z",
+    "project": "happy people",
+    "description": "1:1 Lukas",
+    "tags": [
+      "meet"
+    ]
+  }
+]
