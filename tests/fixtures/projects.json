@@ -2,7 +2,7 @@
   {
     "id": 944484472,
     "identifier": "P178-275",
-    "name": "Die Zahnärzte - Hosting und Support",
+    "name": "ACME - Hosting und Support",
     "active": true,
     "billable": true,
     "customer": {
@@ -61,7 +61,7 @@
   {
     "id": 944921458,
     "identifier": "P050-728",
-    "name": "ISS Maintenance",
+    "name": "ACME Maintenance",
     "active": true,
     "billable": true,
     "customer": {
@@ -156,7 +156,7 @@
   {
     "id": 944923123,
     "identifier": "P010-745",
-    "name": "Hosting, Support und SLA für MyClimate Calculate and Shape Your Trip",
+    "name": "Hosting, Support und SLA for ACME",
     "active": true,
     "billable": true,
     "customer": {
@@ -227,7 +227,7 @@
   {
     "id": 944934716,
     "identifier": "P309-811",
-    "name": "SÜGB App: Betrieb, Support und Maintenance",
+    "name": "ACME App: Betrieb, Support und Maintenance",
     "active": true,
     "billable": true,
     "customer": {
@@ -298,7 +298,7 @@
   {
     "id": 944945965,
     "identifier": "P035-884",
-    "name": "Kuoni - Wartung und Support inkl. Hosting",
+    "name": "ACME Inc - Wartung und Support inkl. Hosting",
     "active": true,
     "billable": true,
     "customer": {
@@ -374,7 +374,7 @@
     "billable": true,
     "customer": {
       "id": 760407626,
-      "name": "Seabird AG"
+      "name": "ACME AG"
     },
     "tasks": [
       {
@@ -439,7 +439,7 @@
     "billable": true,
     "customer": {
       "id": 760253562,
-      "name": "Docuteam AG"
+      "name": "ACME AG"
     },
     "tasks": [
       {
@@ -493,12 +493,12 @@
   {
     "id": 944952985,
     "identifier": "P287-939",
-    "name": "tbf.digital 2024",
+    "name": "acme.digital 2024",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760491013,
-      "name": "TBF + Partner AG"
+      "name": "1337 Inc."
     },
     "tasks": [
       {
@@ -581,7 +581,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -610,7 +610,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -676,12 +676,12 @@
   {
     "id": 944953911,
     "identifier": "P309-946",
-    "name": "SÜGB App: Erweiterungen 2024",
+    "name": "ACME App: Erweiterungen 2024",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760546800,
-      "name": "SÜGB Schweizerischer Überwachungsverband für Gesteinsbaustoffe"
+      "name": "ACME"
     },
     "tasks": [
       {
@@ -740,7 +740,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -811,7 +811,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -864,7 +864,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -893,7 +893,7 @@
     "billable": false,
     "customer": {
       "id": 760253684,
-      "name": "Simplificator AG"
+      "name": "Acme AG"
     },
     "tasks": [
       {
@@ -952,7 +952,7 @@
     "billable": true,
     "customer": {
       "id": 760551320,
-      "name": "ZHAW School of Engineering"
+      "name": "Acme School of Testing"
     },
     "tasks": [
       {
@@ -1000,12 +1000,12 @@
   {
     "id": 944958651,
     "identifier": "P349-981",
-    "name": "Migration auf ZHAW Server",
+    "name": "Migration auf ACME Server",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760556025,
-      "name": "ZHAW Angewandte Psychologie, Laufbahndiagnostik"
+      "name": "ACME Institute of Testing"
     },
     "tasks": [
       {
@@ -1053,12 +1053,12 @@
   {
     "id": 944958652,
     "identifier": "P305-982",
-    "name": "Migration auf ZHAW Server",
+    "name": "Migration to Mars",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760546493,
-      "name": "ZHAW Angewandte Psychologie"
+      "name": "SpaceY"
     },
     "tasks": [
       {
@@ -1111,7 +1111,7 @@
     "billable": true,
     "customer": {
       "id": 760556618,
-      "name": "Underlying Inflation Sagl"
+      "name": "Tesla"
     },
     "tasks": [
       {
@@ -1159,12 +1159,12 @@
   {
     "id": 944959755,
     "identifier": "P309-986",
-    "name": "Integration Subris",
+    "name": "Integration PayPal",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760554281,
-      "name": "Baustoff Kreislauf Schweiz"
+      "name": "PayPal"
     },
     "tasks": [
       {
@@ -1212,12 +1212,12 @@
   {
     "id": 944959964,
     "identifier": "P349-987",
-    "name": "Laufbahndiagnostik Wartung und Entwicklung 2025",
+    "name": "Trump Academy Wartung und Entwicklung 2025",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760556025,
-      "name": "ZHAW Angewandte Psychologie, Laufbahndiagnostik"
+      "name": "Trump Academy"
     },
     "tasks": [
       {
@@ -1295,12 +1295,12 @@
   {
     "id": 944959984,
     "identifier": "P355-988",
-    "name": "Einzelvertrag / Offerte der Plattform \"Sinn im Beruf\"",
+    "name": "Einzelvertrag / Offerte der Plattform \"Project 2025 Tracker\"",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760557017,
-      "name": "Hochschule für Angewandte Psychologie FHNW"
+      "name": "Free People Society"
     },
     "tasks": [
       {
@@ -1390,12 +1390,12 @@
   {
     "id": 944960010,
     "identifier": "P305-989",
-    "name": "ZDVS Testplattform: Maintenance 2025",
+    "name": "Integration von ACME in die Plattform \"Project 2025 Tracker\"",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760546493,
-      "name": "ZHAW Angewandte Psychologie"
+      "name": "Looney Tunes Corp."
     },
     "tasks": [
       {
@@ -1473,12 +1473,12 @@
   {
     "id": 944960766,
     "identifier": "P050-991",
-    "name": "CIP 2025",
+    "name": "Cleanup and Sunset",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760253728,
-      "name": "ISS Schweiz AG"
+      "name": "Jelmoli AG"
     },
     "tasks": [
       {
@@ -1520,12 +1520,12 @@
   {
     "id": 944960919,
     "identifier": "P348-992",
-    "name": "HyperUploader: Support",
+    "name": "HyperDrive: Maintenance",
     "active": true,
     "billable": true,
     "customer": {
       "id": 760556020,
-      "name": "BBVA SA"
+      "name": "HyperDrive AG"
     },
     "tasks": [
       {
@@ -1560,7 +1560,7 @@
     "billable": true,
     "customer": {
       "id": 760253568,
-      "name": "Berufsbildner AG"
+      "name": "Chainsaw AG"
     },
     "tasks": [
       {
