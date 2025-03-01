@@ -54,7 +54,7 @@ export interface MocoActivity {
   user_id: number;
   timer_started_at?: string;
   timer_stopped_at?: string;
-  status: "active" | "locked";
+  status: 'active' | 'locked';
   billable: boolean;
   tag_names?: string[];
 }

@@ -4,7 +4,7 @@ import {
   MocoProject,
   MocoTask,
   MocoUser,
-} from "./types.ts";
+} from './types.ts';
 
 export class MocoClient {
   private readonly baseUrl: string;
@@ -19,7 +19,7 @@ export class MocoClient {
     activeOnly = true,
   ): Promise<Array<MocoProject>> {
     return await this.request<Array<MocoProject>>(
-      `/projects/assigned${activeOnly ? "?active=true" : ""}`,
+      `/projects/assigned${activeOnly ? '?active=true' : ''}`,
     );
   }
 
@@ -28,16 +28,16 @@ export class MocoClient {
   }
 
   public async getUsers(activeOnly = false, internalOnly = false) {
-    const active = `active=${activeOnly ? "true" : "false"}`;
-    const internal = `internal=${internalOnly ? "true" : "false"}`;
+    const active = `active=${activeOnly ? 'true' : 'false'}`;
+    const internal = `internal=${internalOnly ? 'true' : 'false'}`;
     return await this.request<Array<MocoUser>>(`/users?${active}&${internal}`);
   }
 
   public async createActivity(
     activity: CreateMocoActivity,
   ): Promise<MocoActivity> {
-    return await this.request<MocoActivity>("/activities", {
-      method: "POST",
+    return await this.request<MocoActivity>('/activities', {
+      method: 'POST',
       body: JSON.stringify(activity),
     });
   }
@@ -45,8 +45,8 @@ export class MocoClient {
   public async createActivities(
     activities: Array<CreateMocoActivity>,
   ): Promise<MocoActivity> {
-    return await this.request<MocoActivity>("/activities/bulk", {
-      method: "POST",
+    return await this.request<MocoActivity>('/activities/bulk', {
+      method: 'POST',
       body: JSON.stringify({ activities }),
     });
   }
@@ -59,7 +59,7 @@ export class MocoClient {
       ...options,
       headers: {
         Authorization: `Token token=${this.apiKey}`,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         ...options.headers,
       },
     });

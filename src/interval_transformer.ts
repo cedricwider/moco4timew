@@ -4,8 +4,8 @@ import {
   MocoProject,
   MocoTask,
   TimewarriorInterval,
-} from "./mod.ts";
-import { picoSearch } from "@scmmishra/pico-search";
+} from './mod.ts';
+import { picoSearch } from '@scmmishra/pico-search';
 
 /**
  * Transforms Timewarrior intervals into Moco activities
@@ -14,22 +14,22 @@ import { picoSearch } from "@scmmishra/pico-search";
 export class IntervalTransformer {
   /** Tags that indicate non-billable work */
   NO_BILL_TAGS = [
-    "vacation",
-    "holiday",
-    "sick",
-    "illness",
-    "ill",
-    "non-billabe",
-    "nobi",
-    "nobill",
-    "no-bill",
-    "unbillable",
-    "unbill",
-    "un-bill",
-    "nonbillable",
-    "nonbill",
-    "non-bill",
-    "non-billable",
+    'vacation',
+    'holiday',
+    'sick',
+    'illness',
+    'ill',
+    'non-billabe',
+    'nobi',
+    'nobill',
+    'no-bill',
+    'unbillable',
+    'unbill',
+    'un-bill',
+    'nonbillable',
+    'nonbill',
+    'non-bill',
+    'non-billable',
   ];
 
   /** Default fuzzy search threshold */
@@ -124,7 +124,7 @@ export class IntervalTransformer {
       task_id: technicalTask?.id,
       date: new Date(formatISOString(interval.start))
         .toISOString()
-        .split("T")[0],
+        .split('T')[0],
       seconds: this.calculateSeconds(interval),
       description: interval.description,
     };
@@ -143,7 +143,7 @@ export class IntervalTransformer {
    * @throws Error if no matching project is found
    */
   private findProject(searchTerm: string) {
-    const project = this.fuzzyFind(this.projects, searchTerm, ["name"]);
+    const project = this.fuzzyFind(this.projects, searchTerm, ['name']);
 
     if (!project) {
       throw new Error(
@@ -171,19 +171,19 @@ export class IntervalTransformer {
   ): MocoTask | undefined {
     // Filter out work tag and keep only non-billable tags
     const nonBillableTags = tags
-      .filter((tag) => tag !== "work") // work is just the context added by taskwarrior
+      .filter((tag) => tag !== 'work') // work is just the context added by taskwarrior
       .filter((tag) => !this.NO_BILL_TAGS.includes(tag));
 
     // Default to "software engineering" if no relevant tags found
-    const searchTerm = nonBillableTags[0] ?? "software engineering";
+    const searchTerm = nonBillableTags[0] ?? 'software engineering';
 
     const activeTasks = tasks.filter((task) => task.active);
     if (activeTasks.length === 0) {
-      console.warn("No active tasks found for project");
+      console.warn('No active tasks found for project');
       return undefined;
     }
 
-    const technicalTask = this.fuzzyFind(activeTasks, searchTerm, ["name"]);
+    const technicalTask = this.fuzzyFind(activeTasks, searchTerm, ['name']);
     return technicalTask;
   }
 
@@ -227,11 +227,11 @@ export class IntervalTransformer {
       const end = new Date(formatISOString(interval.end));
 
       if (isNaN(start.getTime()) || isNaN(end.getTime())) {
-        throw new Error("Invalid date format");
+        throw new Error('Invalid date format');
       }
 
       if (end < start) {
-        throw new Error("End date is before start date");
+        throw new Error('End date is before start date');
       }
 
       return (end.getTime() - start.getTime()) / 1000;
@@ -247,11 +247,11 @@ export class IntervalTransformer {
    */
   private validateProjects(projects: MocoProject[]): void {
     if (!projects || !Array.isArray(projects)) {
-      throw new Error("Projects must be a valid array");
+      throw new Error('Projects must be a valid array');
     }
 
     if (projects.length === 0) {
-      console.warn("No projects provided to IntervalTransformer");
+      console.warn('No projects provided to IntervalTransformer');
     }
   }
 
@@ -262,15 +262,15 @@ export class IntervalTransformer {
    */
   private validateInterval(interval: TimewarriorInterval): void {
     if (!interval) {
-      throw new Error("Interval cannot be null or undefined");
+      throw new Error('Interval cannot be null or undefined');
     }
 
     if (!interval.start || !interval.end) {
-      throw new Error("Interval must have start and end dates");
+      throw new Error('Interval must have start and end dates');
     }
 
     if (!interval.project) {
-      throw new Error("Interval must have a project name");
+      throw new Error('Interval must have a project name');
     }
   }
 }

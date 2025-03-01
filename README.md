@@ -1,6 +1,7 @@
 # Timewarrior to Moco Sync
 
-A Deno-based tool that synchronizes time tracking data from Timewarrior to Moco, featuring fuzzy matching for project and task names.
+A Deno-based tool that synchronizes time tracking data from Timewarrior to Moco,
+featuring fuzzy matching for project and task names.
 
 ## Features
 
@@ -20,6 +21,7 @@ A Deno-based tool that synchronizes time tracking data from Timewarrior to Moco,
 
 1. Clone this repository
 2. Build the binary:
+
 ```bash
 deno task build
 ```
@@ -39,27 +41,30 @@ deno task build     # Create binary executable
 ## Configuration
 
 The tool requires:
+
 - Moco API token
 - Moco instance URL
 - Optional fuzzy matching threshold (default: 0.8)
 
 ## Usage
 
-The tool can be used as a Timewarrior hook to automatically sync time entries to Moco.
+The tool can be used as a Timewarrior hook to automatically sync time entries to
+Moco.
 
 Non-billable time can be marked using tags such as:
+
 - vacation
 - holiday
 - sick
 - nobill
-- non-billable
-(and various other variations)
+- non-billable (and various other variations)
 
 By default, all time entries are considered billable unless tagged otherwise.
 
 ## Testing
 
 Run the test suite:
+
 ```bash
 deno task test
 ```

@@ -1,7 +1,7 @@
-import { assertEquals } from "@std/assert";
-import { TimewarriorParser } from "../../src/timewarrior/parser.ts";
+import { assertEquals } from '@std/assert';
+import { TimewarriorParser } from '../../src/timewarrior/parser.ts';
 
-Deno.test("TimewarriorParser.parse", () => {
+Deno.test('TimewarriorParser.parse', () => {
   const input = `temp.report.start: 20240228T000000Z
 temp.report.end: 20240228T235959Z
 debug: 0
@@ -27,8 +27,8 @@ verbose: 1
   const config = result.config;
 
   // Test config parsing
-  assertEquals(config.temp?.report?.start, "20240228T000000Z");
-  assertEquals(config.temp?.report?.end, "20240228T235959Z");
+  assertEquals(config.temp?.report?.start, '20240228T000000Z');
+  assertEquals(config.temp?.report?.end, '20240228T235959Z');
   assertEquals(result.config.debug, false);
   assertEquals(result.config.verbose, true);
 
@@ -36,8 +36,8 @@ verbose: 1
   assertEquals(result.intervals.length, 2);
   const interval = result.intervals[0];
   assertEquals(interval.id, 1);
-  assertEquals(interval.project, "sugb");
-  assertEquals(interval.description, "Test description");
-  assertEquals(interval.start, "20240228T080000Z");
-  assertEquals(interval.tags, ["work", "project1"]);
+  assertEquals(interval.project, 'sugb');
+  assertEquals(interval.description, 'Test description');
+  assertEquals(interval.start, '20240228T080000Z');
+  assertEquals(interval.tags, ['work', 'project1']);
 });

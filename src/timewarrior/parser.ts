@@ -2,7 +2,7 @@ import {
   TimewarriorConfig,
   TimewarriorData,
   TimewarriorInterval,
-} from "./types.ts";
+} from './types.ts';
 
 export class TimewarriorParser {
   /**
@@ -11,7 +11,7 @@ export class TimewarriorParser {
    * @returns Parsed Timewarrior data including config and intervals
    */
   public static parse(input: string): TimewarriorData {
-    const [configStr, jsonStr] = input.split("\n\n");
+    const [configStr, jsonStr] = input.split('\n\n');
 
     return {
       config: this.parseConfig(configStr),
@@ -30,24 +30,24 @@ export class TimewarriorParser {
       verbose: false,
     };
 
-    configStr.split("\n").forEach((line) => {
-      const [key, ...valueParts] = line.split(": ");
-      const value = valueParts.join(": ");
+    configStr.split('\n').forEach((line) => {
+      const [key, ...valueParts] = line.split(': ');
+      const value = valueParts.join(': ');
 
       if (!key || !value) return;
 
-      if (key === "debug") {
-        config.debug = value === "1";
+      if (key === 'debug') {
+        config.debug = value === '1';
         return;
       }
 
-      if (key === "verbose") {
-        config.verbose = value === "1";
+      if (key === 'verbose') {
+        config.verbose = value === '1';
         return;
       }
 
       // Handle nested properties like temp.report.start
-      const parts = key.split(".");
+      const parts = key.split('.');
       let current: any = config;
 
       parts.forEach((part, index) => {
@@ -91,7 +91,7 @@ export class TimewarriorParser {
   private static parseProjectTag(tag: string): [string, string] {
     const match = tag.match(/^([^:]+):\s*(.+)$/);
     if (!match) {
-      return ["", ""];
+      return ['', ''];
     }
     const [, project, description] = match;
     return [project.toLowerCase(), description.trim()];
