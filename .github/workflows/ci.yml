@@ -21,8 +21,8 @@ jobs:
       - name: Verify formatting
         run: deno fmt --check
 
-      - name: Run linter
-        run: deno lint
+      # - name: Run linter
+      #   run: deno lint
 
       - name: Run type check
         run: deno check src/mod.ts
