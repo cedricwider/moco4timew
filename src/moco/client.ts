@@ -42,6 +42,15 @@ export class MocoClient {
     });
   }
 
+  public async createActivities(
+    activities: Array<CreateMocoActivity>,
+  ): Promise<MocoActivity> {
+    return await this.request<MocoActivity>("/activities/bulk", {
+      method: "POST",
+      body: JSON.stringify({ activities }),
+    });
+  }
+
   private async request<T>(
     path: string,
     options: RequestInit = {},

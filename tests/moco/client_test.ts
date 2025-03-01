@@ -44,6 +44,31 @@ const mockFetch = async (
         active: true,
       },
     ];
+  } else if (url.includes("/activities/bulk")) {
+    responseBody = {
+      success: true,
+      activities_created: 2,
+      activities: [
+        {
+          id: 123,
+          date: "2024-02-28",
+          seconds: 3600,
+          description: "Test activity 1",
+          project_id: 456,
+          task_id: 789,
+          billable: true,
+        },
+        {
+          id: 124,
+          date: "2024-02-28",
+          seconds: 1800,
+          description: "Test activity 2",
+          project_id: 456,
+          task_id: 789,
+          billable: true,
+        },
+      ],
+    };
   } else if (url.includes("/activities")) {
     responseBody = {
       id: 123,
@@ -196,6 +221,51 @@ Deno.test("MocoClient - Create Activity", async () => {
     assertEquals(activity.description, "Test activity");
     assertEquals(activity.project_id, 456);
     assertEquals(activity.task_id, 789);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+Deno.test("MocoClient - Create Multiple Activities", async () => {
+  try {
+    globalThis.fetch = mockFetch;
+
+    const client = new MocoClient("example", "api-token");
+    const fetchSpy = spy(globalThis, "fetch");
+
+    const newActivities: CreateMocoActivity[] = [
+      {
+        date: "2024-02-28",
+        seconds: 3600,
+        description: "Test activity 1",
+        project_id: 456,
+        task_id: 789,
+        billable: true,
+      },
+      {
+        date: "2024-02-28",
+        seconds: 1800,
+        description: "Test activity 2",
+        project_id: 456,
+        task_id: 789,
+        billable: true,
+      },
+    ];
+
+    const result = await client.createActivities(newActivities);
+
+    // Assert fetch was called with correct URL and method
+    assertSpyCalls(fetchSpy, 1);
+    const call = fetchSpy.calls[0];
+    const url = call.args[0].toString();
+    const options = call.args[1];
+
+    assertEquals(url.includes("/activities/bulk"), true);
+    assertEquals(options?.method, "POST");
+    assertEquals(options?.body, JSON.stringify({ activities: newActivities }));
+
+    // Assert response was processed correctly
+    assertExists(result);
   } finally {
     globalThis.fetch = originalFetch;
   }

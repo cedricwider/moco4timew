@@ -13,28 +13,20 @@ for await (const chunk of Deno.stdin.readable) {
 }
 
 // Parse the input using our TimewarriorParser
-const parsedData = TimewarriorParser.parse(input);
-
 const mocoClient = new MocoClient(
   "simplificator",
   Deno.env.get("MOCO_API_KEY") || "",
 );
-
 const projects = await mocoClient.getAssignedProjects(true);
-
 const transformer = new IntervalTransformer(projects);
+
+const parsedData = TimewarriorParser.parse(input);
 const activities = parsedData.intervals.map((interval) =>
   transformer.toActivity(interval),
 );
-const summarizedActivities = transformer.summarize(activities);
 
-// Output the parsed data
-console.log("Parsed Timewarrior Data:");
-console.log("------------------------");
-console.log("Config:", parsedData.config);
-console.log("------------------------");
-console.log("Intervals:", parsedData.intervals);
-console.log("------------------------");
-console.log("Projects:", projects);
-console.log("------------------------");
-console.log("Activities:", summarizedActivities);
+const summarizedActivities = transformer.summarize(activities);
+mocoClient.createActivities(summarizedActivities);
+console.log(
+  `Successfully transmitted ${summarizedActivities.length} activities.`,
+);
