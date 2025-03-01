@@ -61,3 +61,32 @@ Deno.test(
     });
   },
 );
+
+Deno.test("IntervalTransformer - summarizes identical intervals", () => {
+  const activities = [
+    {
+      project_id: 944934716,
+      task_id: 3281058,
+      date: "2025-02-28",
+      seconds: 1800, // 30 minutes
+      description: "Get all tests running again!",
+    },
+    {
+      project_id: 944934716,
+      task_id: 3281058,
+      date: "2025-02-28",
+      seconds: 1800, // 30 minutes
+      description: "Get all tests running again!",
+    },
+  ];
+
+  const summarized = new IntervalTransformer([]).summarize(activities);
+  assertEquals(summarized.length, 1);
+  assertEquals(summarized[0], {
+    project_id: 944934716,
+    task_id: 3281058,
+    date: "2025-02-28",
+    seconds: 3600, // 60 minutes
+    description: "Get all tests running again!",
+  });
+});

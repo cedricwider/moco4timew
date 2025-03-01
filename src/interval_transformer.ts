@@ -77,6 +77,37 @@ export class IntervalTransformer {
   }
 
   /**
+   * Searches for activities with the same date, project,
+   * activity and description and merges them by summing up the seconds
+   * @param activities Array of Timewarrior intervals
+   * @returns Array of Moco activities ready to be created
+   */
+  public summarize(
+    activities: Array<CreateMocoActivity | undefined>,
+  ): Array<CreateMocoActivity> {
+    const summarized: Array<CreateMocoActivity> = [];
+
+    activities
+      .filter((activity) => !!activity)
+      .forEach((interval) => {
+        const existing = summarized.find(
+          (item) =>
+            item.date === interval.date &&
+            item.project_id === interval.project_id &&
+            item.description === interval.description,
+        );
+
+        if (existing) {
+          existing.seconds += interval.seconds;
+        } else {
+          summarized.push(interval);
+        }
+      });
+
+    return summarized;
+  }
+
+  /**
    * Builds a Moco activity object based on interval data
    * @param project The matched Moco project
    * @param technicalTask The matched Moco task
