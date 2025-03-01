@@ -194,7 +194,7 @@ export class IntervalTransformer {
    * @param keys Object keys to search in
    * @returns The best matching object or undefined if none found
    */
-  private fuzzyFind<T extends MocoProject | MocoTask>(
+  private fuzzyFind<T>(
     things: Array<T>,
     searchTerm: string,
     keys: Array<keyof T>,
