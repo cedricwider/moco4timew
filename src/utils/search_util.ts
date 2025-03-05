@@ -1,5 +1,5 @@
-import { picoSearch } from "@scmmishra/pico-search";
-import { fuzzySearch } from "@abdurahman/fuzzy-search";
+import { picoSearch } from '@scmmishra/pico-search';
+import { fuzzySearch } from '@abdurahman/fuzzy-search';
 
 export class SearchUtil {
   /** Default fuzzy search threshold */

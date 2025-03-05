@@ -5,7 +5,7 @@ import {
   MocoTask,
   SearchUtil,
   TimewarriorInterval,
-} from "../mod.ts";
+} from '../mod.ts';
 
 /**
  * Transforms Timewarrior intervals into Moco activities
@@ -14,22 +14,22 @@ import {
 export class IntervalTransformer {
   /** Tags that indicate non-billable work */
   NO_BILL_TAGS = [
-    "vacation",
-    "holiday",
-    "sick",
-    "illness",
-    "ill",
-    "non-billabe",
-    "nobi",
-    "nobill",
-    "no-bill",
-    "unbillable",
-    "unbill",
-    "un-bill",
-    "nonbillable",
-    "nonbill",
-    "non-bill",
-    "non-billable",
+    'vacation',
+    'holiday',
+    'sick',
+    'illness',
+    'ill',
+    'non-billabe',
+    'nobi',
+    'nobill',
+    'no-bill',
+    'unbillable',
+    'unbill',
+    'un-bill',
+    'nonbillable',
+    'nonbill',
+    'non-bill',
+    'non-billable',
   ];
 
   private readonly searchUtil: SearchUtil;
@@ -116,7 +116,7 @@ export class IntervalTransformer {
       task_id: technicalTask?.id,
       date: new Date(formatISOString(interval.start))
         .toISOString()
-        .split("T")[0],
+        .split('T')[0],
       seconds: this.calculateSeconds(interval),
       description: interval.description,
     };
@@ -136,7 +136,7 @@ export class IntervalTransformer {
    */
   private findProject(searchTerm: string) {
     const project = this.searchUtil.fuzzyFind(this.projects, searchTerm, [
-      "name",
+      'name',
     ]);
 
     if (!project) {
@@ -164,20 +164,20 @@ export class IntervalTransformer {
     tasks: Array<MocoTask>,
   ): MocoTask | undefined {
     const searchTerms = tags
-      .filter((tag) => tag !== "work") // work is just the context added by taskwarrior
+      .filter((tag) => tag !== 'work') // work is just the context added by taskwarrior
       .filter((tag) => !this.NO_BILL_TAGS.includes(tag));
 
     // Chose "software engineering" as "sane default"
-    if (searchTerms.length === 0) searchTerms.push("software engineering");
+    if (searchTerms.length === 0) searchTerms.push('software engineering');
 
     const activeTasks = tasks.filter((task) => task.active);
     if (activeTasks.length === 0) {
-      console.warn("No active tasks found for project");
+      console.warn('No active tasks found for project');
       return undefined;
     }
 
     const rankedTasks = this.searchUtil.fuzzyRank(activeTasks, searchTerms, [
-      "name",
+      'name',
     ]);
     const { thing: task } = rankedTasks[0];
     return task;
@@ -194,11 +194,11 @@ export class IntervalTransformer {
       const end = new Date(formatISOString(interval.end));
 
       if (isNaN(start.getTime()) || isNaN(end.getTime())) {
-        throw new Error("Invalid date format");
+        throw new Error('Invalid date format');
       }
 
       if (end < start) {
-        throw new Error("End date is before start date");
+        throw new Error('End date is before start date');
       }
 
       return (end.getTime() - start.getTime()) / 1000;
@@ -214,11 +214,11 @@ export class IntervalTransformer {
    */
   private validateProjects(projects: MocoProject[]): void {
     if (!projects || !Array.isArray(projects)) {
-      throw new Error("Projects must be a valid array");
+      throw new Error('Projects must be a valid array');
     }
 
     if (projects.length === 0) {
-      console.warn("No projects provided to IntervalTransformer");
+      console.warn('No projects provided to IntervalTransformer');
     }
   }
 
@@ -229,15 +229,15 @@ export class IntervalTransformer {
    */
   private validateInterval(interval: TimewarriorInterval): void {
     if (!interval) {
-      throw new Error("Interval cannot be null or undefined");
+      throw new Error('Interval cannot be null or undefined');
     }
 
     if (!interval.start || !interval.end) {
-      throw new Error("Interval must have start and end dates");
+      throw new Error('Interval must have start and end dates');
     }
 
     if (!interval.project) {
-      throw new Error("Interval must have a project name");
+      throw new Error('Interval must have a project name');
     }
   }
 }
