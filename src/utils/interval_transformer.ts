@@ -3,9 +3,9 @@ import {
   formatISOString,
   MocoProject,
   MocoTask,
+  SearchUtil,
   TimewarriorInterval,
-} from './mod.ts';
-import { picoSearch } from '@scmmishra/pico-search';
+} from '../mod.ts';
 
 /**
  * Transforms Timewarrior intervals into Moco activities
@@ -32,24 +32,16 @@ export class IntervalTransformer {
     'non-billable',
   ];
 
-  /** Default fuzzy search threshold */
-  private readonly fuzzyThreashold: number = 0.8;
-
-  /** Available Moco projects */
-  private readonly projects: MocoProject[];
+  private readonly searchUtil: SearchUtil;
 
   /**
    * Creates a new IntervalTransformer
    * @param projects Array of Moco projects with their tasks
    * @param options Optional configuration parameters
    */
-  constructor(projects: MocoProject[], options?: { fuzzyThreshold?: number }) {
+  constructor(private readonly projects: MocoProject[]) {
     this.validateProjects(projects);
-    this.projects = projects;
-
-    if (options?.fuzzyThreshold) {
-      this.fuzzyThreashold = options.fuzzyThreshold;
-    }
+    this.searchUtil = new SearchUtil();
   }
 
   /**
@@ -143,7 +135,9 @@ export class IntervalTransformer {
    * @throws Error if no matching project is found
    */
   private findProject(searchTerm: string) {
-    const project = this.fuzzyFind(this.projects, searchTerm, ['name']);
+    const project = this.searchUtil.fuzzyFind(this.projects, searchTerm, [
+      'name',
+    ]);
 
     if (!project) {
       throw new Error(
@@ -169,13 +163,12 @@ export class IntervalTransformer {
     tags: Array<string>,
     tasks: Array<MocoTask>,
   ): MocoTask | undefined {
-    // Filter out work tag and keep only non-billable tags
-    const nonBillableTags = tags
+    const searchTerms = tags
       .filter((tag) => tag !== 'work') // work is just the context added by taskwarrior
       .filter((tag) => !this.NO_BILL_TAGS.includes(tag));
 
-    // Default to "software engineering" if no relevant tags found
-    const searchTerm = nonBillableTags[0] ?? 'software engineering';
+    // Chose "software engineering" as "sane default"
+    if (searchTerms.length === 0) searchTerms.push('software engineering');
 
     const activeTasks = tasks.filter((task) => task.active);
     if (activeTasks.length === 0) {
@@ -183,37 +176,11 @@ export class IntervalTransformer {
       return undefined;
     }
 
-    const technicalTask = this.fuzzyFind(activeTasks, searchTerm, ['name']);
-    return technicalTask;
-  }
-
-  /**
-   * Performs fuzzy search on an array of objects
-   * @param things Array of objects to search through
-   * @param searchTerm Term to search for
-   * @param keys Object keys to search in
-   * @returns The best matching object or undefined if none found
-   */
-  private fuzzyFind<T>(
-    things: Array<T>,
-    searchTerm: string,
-    keys: Array<keyof T>,
-  ): T | undefined {
-    if (!things || things.length === 0) {
-      console.warn(`No items to search through for term: "${searchTerm}"`);
-      return undefined;
-    }
-
-    const attributes = keys.map((key) => key.toString().toLowerCase());
-    const results = picoSearch(things, searchTerm, attributes, {
-      threshold: this.fuzzyThreashold,
-    });
-
-    if (results.length === 0) {
-      console.warn(`No matches found for search term: "${searchTerm}"`);
-    }
-
-    return results[0];
+    const rankedTasks = this.searchUtil.fuzzyRank(activeTasks, searchTerms, [
+      'name',
+    ]);
+    const { thing: task } = rankedTasks[0];
+    return task;
   }
 
   /**

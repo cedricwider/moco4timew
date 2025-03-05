@@ -1,6 +1,6 @@
 import { assertEquals } from '@std/assert';
-import { IntervalTransformer } from '../src/interval_transformer.ts';
-import { MocoProject } from '../src/moco/types.ts';
+import { IntervalTransformer } from '../../src/utils/interval_transformer.ts';
+import { MocoProject } from '../../src/moco/types.ts';
 
 Deno.test(
   'IntervalTransformer - transforms timewarrior intervals to moco activities',

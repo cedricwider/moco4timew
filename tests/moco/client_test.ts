@@ -166,7 +166,7 @@ Deno.test('MocoClient - Request method handles errors', async () => {
   try {
     // Create a mock that returns an error
     globalThis.fetch = async () => {
-      return new Response('Not found', { status: 404 });
+      return await new Response('Not found', { status: 404 });
     };
 
     const client = new MocoClient('example', 'api-token');
