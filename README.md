@@ -59,9 +59,12 @@ The tool requires:
    MOCO_INSTANCE_URL=your_instance_url_here
    ```
 
-3. **Important:** The `.env` file contains sensitive information and should **never** be committed to version control. It's already included in `.gitignore` to prevent accidental commits.
+3. **Important:** The `.env` file contains sensitive information and should
+   **never** be committed to version control. It's already included in
+   `.gitignore` to prevent accidental commits.
 
-When using the Devbox development environment, these environment variables will be automatically loaded through the `.envrc` file.
+When using the Devbox development environment, these environment variables will
+be automatically loaded through the `.envrc` file.
 
 ## Usage
 

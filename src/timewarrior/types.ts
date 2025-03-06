@@ -23,3 +23,10 @@ export interface TimewarriorData {
   config: TimewarriorConfig;
   intervals: TimewarriorInterval[];
 }
+
+export interface RawTimewarriorInterval {
+  id: number;
+  start: string;
+  end: string;
+  tags: string[];
+}

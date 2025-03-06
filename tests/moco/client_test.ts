@@ -5,13 +5,13 @@ import { CreateMocoActivity } from '../../src/moco/types.ts';
 
 // Mock fetch to avoid actual API calls during tests
 const originalFetch = globalThis.fetch;
-const mockFetch = async (
+const mockFetch = (
   input: RequestInfo | URL,
-  init?: RequestInit,
+  _init?: RequestInit,
 ): Promise<Response> => {
   // Default mock response
   let responseBody = {};
-  let status = 200;
+  const status = 200;
   const url = input.toString();
 
   // Match different endpoints and return appropriate mock data
@@ -81,10 +81,12 @@ const mockFetch = async (
     };
   }
 
-  return new Response(JSON.stringify(responseBody), {
-    status,
-    headers: { 'Content-Type': 'application/json' },
-  });
+  return Promise.resolve(
+    new Response(JSON.stringify(responseBody), {
+      status,
+      headers: { 'Content-Type': 'application/json' },
+    }),
+  );
 };
 
 Deno.test('MocoClient - Get Assigned Projects', async () => {

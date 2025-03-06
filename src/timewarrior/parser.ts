@@ -1,4 +1,5 @@
 import {
+  RawTimewarriorInterval,
   TimewarriorConfig,
   TimewarriorData,
   TimewarriorInterval,
@@ -48,14 +49,14 @@ export class TimewarriorParser {
 
       // Handle nested properties like temp.report.start
       const parts = key.split('.');
-      let current: any = config;
+      let current: Record<string, unknown> = config;
 
       parts.forEach((part, index) => {
         if (index === parts.length - 1) {
           current[part] = value;
         } else {
           current[part] = current[part] || {};
-          current = current[part];
+          current = current[part] as Record<string, unknown>;
         }
       });
     });
@@ -73,7 +74,7 @@ export class TimewarriorParser {
       return [];
     }
 
-    return JSON.parse(intervalsStr).map((interval: any) => {
+    return JSON.parse(intervalsStr).map((interval: RawTimewarriorInterval) => {
       const [projectTag, ...remainingTags] = interval.tags;
       const [project, description] = this.parseProjectTag(projectTag);
 
