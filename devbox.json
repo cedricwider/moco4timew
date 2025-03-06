@@ -3,11 +3,27 @@
   "packages": ["deno@latest"],
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
+      "echo 'Welcome to the Timewarrior to Moco Sync project!'",
+      "echo 'Please ensure you have set up the required environment variables:'",
+      "echo '- API key for authentication'",
+      "echo '- Instance URL for your account'",
+      "echo 'See README and .env.example for more details.'"
     ],
     "scripts": {
+      "dev": [
+        "deno task dev"
+      ],
       "test": [
-        "echo \"Error: no test specified\" && exit 1"
+        "deno task test"
+      ],
+      "test:watch": [
+        "deno task test:watch"
+      ],
+      "check": [
+        "deno task check"
+      ],
+      "build": [
+        "deno task build"
       ]
     }
   }

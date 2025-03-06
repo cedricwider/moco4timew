@@ -46,6 +46,23 @@ The tool requires:
 - Moco instance URL
 - Optional fuzzy matching threshold (default: 0.8)
 
+### Environment Variables Setup
+
+1. Copy the example environment file to create your own local environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit the `.env` file and set your actual credentials:
+   ```
+   MOCO_API_KEY=your_actual_api_key_here
+   MOCO_INSTANCE_URL=your_instance_url_here
+   ```
+
+3. **Important:** The `.env` file contains sensitive information and should **never** be committed to version control. It's already included in `.gitignore` to prevent accidental commits.
+
+When using the Devbox development environment, these environment variables will be automatically loaded through the `.envrc` file.
+
 ## Usage
 
 The tool can be used as a Timewarrior hook to automatically sync time entries to
