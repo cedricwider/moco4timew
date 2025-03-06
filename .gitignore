@@ -1,1 +1,10 @@
 moco4timew
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Devbox local configuration
+devbox.local.json
+.envrc
